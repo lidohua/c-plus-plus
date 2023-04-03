@@ -1,1 +1,68 @@
 
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+struct  family{
+    long double I;
+    char J;
+    long double K;
+}
+;
+int main()
+{
+    cout.setf(ios_base::fixed,ios_base::floatfield);
+    long   double  A;
+    long   double B;
+    char  C;
+    long double D=0;
+    long long E= 0;
+    printf("一一一一欢迎使用计算器一一一一一\n");
+    for(;;)
+    {
+        cout << ""<< endl;
+        printf("请输入算式. \n");
+        cin >>A >>C>>B;
+        switch( C )
+        {
+            case('+'):
+            D=A+B;
+            cout <<A <<"+"<< B <<"=";
+            cout  <<D << endl;
+            break ;
+            case('-'):
+            D=A-B;
+            cout <<A<<"-"<<B<<"=";
+            cout<<D<< endl;
+            break ;
+            case('*'):
+            D=A*B;
+            cout << A <<"×"<< B <<"=";
+            cout<<D<< endl;
+            break ;
+            case('/'):
+            D=A/B;
+            cout << A <<"÷"<< B <<"=";
+            cout  <<D<< endl;
+            break ;
+            case('%'):
+            printf("请输入算式（注意空格和整数）\n");
+            long long  F;
+            long long H;
+            cin >>F >>C>>H;
+            D=F%H;
+            cout << A <<"%"<< B <<"=";
+            cout  <<D<< endl;
+            break ;
+        }
+        E++;
+        cout <<"你已使用"<< E<< "次"<<endl;
+        cout << "请选择下一步1：查看历史2开始使用" << endl;
+        char X;
+        cin >> X;
+        if(X=='1'){
+            cout << A<<C<<B <<"="<<D<<endl;
+            long double D=0;
+        }
+    }
+    return 0;
+}
